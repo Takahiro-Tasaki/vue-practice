@@ -18,7 +18,7 @@ let app = new Vue({
       }).then(function(text) {
         this.message = text;
       }).catch(function(error) {
-        window.alert("Error: " + erorr.message);
+        window.alert("Error: " + error.message);
       });
     }
   }
