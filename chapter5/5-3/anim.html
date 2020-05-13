@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <style>
+      #panel {
+        border: solid 1px #000;
+        overflow: hidden;
+        width: 350px;
+      }
+
+      .v-enter-active,
+      .v-leave-active {
+        transition: height 1s;
+      }
+
+      .v-enter {
+        height: 0;
+      }
+
+      .v-enter-to {
+        height: 200px;
+      }
+
+      .v-leave {
+        height: 200px;
+      }
+
+      .v-leave-to {
+        width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input type="button" value="表示／非表示" v-on:click="onclick">
+      <transition>
+        <div id="panel" v-show="flag">WINGSプロジェクトで一緒に執筆の仕事をしてみませんか？<br>ただいまメンバー募集中！<br>是非、ご応募ください。</div>
+      </transition>
+    </div>
+    <script src="../../lib/vue.js"></script>
+    <script src="../../lib/common.js"></script>
+    <script src="js/anim.js"></script>
+  </body>
+</html>
