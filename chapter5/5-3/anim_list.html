@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <style>
+			.v-enter-active, .v-leave-active, .v-move {
+				transition: transform 1s;
+			}
+
+			.v-enter, .v-leave-to {
+				transform: translateX(80%);
+			}
+
+			.v-leave-active {
+				position: absolute;
+			}
+    </style>
+  </head>
+  <body>
+		<div id="app">
+			<div id="list">
+				<form>
+					<label for="todo">やること：</label>
+					<input id="todo" type="text" size="40" v-model="todo" /><br />
+					<input type="button" value="追加" v-on:click="onAdd" />
+					<input type="button" value="削除" v-on:click="onRemove" />
+					<input type="button" value="ソート" v-on:click="onSort" />
+				</form>
+				<transition-group tag="ul">
+					<li v-for="item in items" v-bind:key="item">{{ item }}</li>
+				</transition-group>
+			</div>
+		</div>
+    <script src="../../lib/vue.js"></script>
+    <script src="../../lib/common.js"></script>
+    <script src="js/anim_list.js"></script>
+  </body>
+</html>
