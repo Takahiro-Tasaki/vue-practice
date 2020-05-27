@@ -19,9 +19,12 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/article/:aid*',
+    path: '/article/:aid',
     name: 'Article',
-    component: () => import('../components/Article.vue')
+    component: () => import('../components/Article.vue'),
+    props: routes => ({
+      aid: Number(routes.params.aid)
+    })
   }
 ]
 
