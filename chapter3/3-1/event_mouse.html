@@ -6,10 +6,9 @@
   </head>
   <body>
     <div id="app">
-      
+      <img v-bind:src="path" alt="ロゴ画像" v-on:mouseenter="onmouseenter" v-on:mouseleave="onmouseleave">
     </div>
     <script src="../../lib/vue.js"></script>
-    <script src="../../lib/common.js"></script>
-    <script src="js/template.js"></script>
+    <script src="js/event_mouse.js"></script>
   </body>
 </html>

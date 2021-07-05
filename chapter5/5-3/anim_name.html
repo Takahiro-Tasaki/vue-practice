@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <style>
+			#panel {
+				border: 1px solid #000;
+				width: 350px;
+				overflow: hidden;
+			}
+
+			.panel-enter-active, .panel-leave-active {
+				transition: opacity 5s;
+			}
+
+			.panel-enter, .panel-leave-to {
+				opacity: 0;
+			}
+    </style>
+  </head>
+  <body>
+    <div id="app">
+			<input type="button" value="表示／非表示" v-on:click="onclick">
+			<transition mode="out-in" name="panel">
+				<div id="panel" v-show="flag">
+					WINGSプロジェクトで一緒に執筆の仕事をしてみませんか？<br>
+					ただいまメンバー募集中！<br>
+					是非、ご応募ください。
+				</div>
+			</transition>
+    </div>
+    <script src="../../lib/vue.js"></script>
+    <script src="../../lib/common.js"></script>
+    <script src="js/anim_name.js"></script>
+  </body>
+</html>

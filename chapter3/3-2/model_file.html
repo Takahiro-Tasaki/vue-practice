@@ -6,10 +6,12 @@
   </head>
   <body>
     <div id="app">
-      
+      <form>
+        <input ref="upfile" type="file" v-on:change="onchange">
+      </form>
+      <div>{{ message }}</div>
     </div>
     <script src="../../lib/vue.js"></script>
-    <script src="../../lib/common.js"></script>
-    <script src="js/template.js"></script>
+    <script src="js/model_file.js"></script>
   </body>
 </html>

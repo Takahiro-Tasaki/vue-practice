@@ -6,10 +6,11 @@
   </head>
   <body>
     <div id="app">
-      
+      <a v-bind:style="{ 'tap-highlight-color': 'Aqua' }" v-bind:href="url">
+        {{ url }}
+      </a>
     </div>
     <script src="../../lib/vue.js"></script>
-    <script src="../../lib/common.js"></script>
-    <script src="js/template.js"></script>
+    <script src="js/style_prefix.js"></script>
   </body>
 </html>
